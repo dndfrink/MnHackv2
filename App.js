@@ -18,7 +18,6 @@ import ReferenceScreen from "./components/ReferenceScreen";
 import RefSearch from "./components/RefSearch";
 import StrawberryDeviceScreen from "./components/StrawberryDeviceScreen";
 
-
 const MainNavigator = createStackNavigator({
   MainScreen: { screen: MainScreen },
   ReferenceScreen: { screen: ReferenceScreen },

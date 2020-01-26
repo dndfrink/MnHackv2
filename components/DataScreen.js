@@ -19,7 +19,7 @@ export default class DataScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <Button
-        title="Strawberry Incubator"
+        title="Our Strawberry Incubator"
         onPress={() => navigate("StrawberryDeviceScreen")}
       />
     );
