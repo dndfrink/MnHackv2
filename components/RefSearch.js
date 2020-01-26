@@ -13,18 +13,6 @@ import {
 } from "react-native";
 
 export default class RefSearchScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { text: "" };
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event = {}) {
-    const value = event.target && event.target.value;
-
-    this.setState(value);
-  }
-
   static navigationOptions = {
     title: "Plant Search"
   };
@@ -37,8 +25,6 @@ export default class RefSearchScreen extends React.Component {
             placeholder="Plant Search"
             placeholderTextColor="black"
             style={styles.input}
-            onChangeText={text => this.setState({ text })}
-            value={this.state.text}
           />
           <View
             style={{
@@ -47,7 +33,7 @@ export default class RefSearchScreen extends React.Component {
               justifyContent: "center"
             }}
           >
-            <Button title="Add" color="blue" />
+            <Button title="SEARCH" color="blue" />
             <Button
               title="CANCEL"
               color="red"
@@ -55,51 +41,62 @@ export default class RefSearchScreen extends React.Component {
             />
           </View>
         </View>
+        <View style={styles.txt}>
+          <Text style={styles.t}>Community Favorites</Text>
+        </View>
         <ScrollView style={styles.inputScroll}>
           <TouchableOpacity onPress={() => navigate("ReferenceScreen")}>
             <View style={styles.listItem}>
-              <Text>Strawberry</Text>
+              <Text style={styles.tt}>Strawberry</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
             <View style={styles.listItem}>
-              <Text>Runner Beans</Text>
+              <Text style={styles.tt}>Runner Beans</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
             <View style={styles.listItem}>
-              <Text>Broccoli</Text>
+              <Text style={styles.tt}>Broccoli</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
             <View style={styles.listItem}>
-              <Text>Peas</Text>
+              <Text style={styles.tt}>Peas</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
             <View style={styles.listItem}>
-              <Text>Coriander</Text>
+              <Text style={styles.tt}>Coriander</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
             <View style={styles.listItem}>
-              <Text color="grey">Peppers</Text>
+              <Text style={styles.tt}>Peppers</Text>
             </View>
           </TouchableOpacity>
         </ScrollView>
       </View>
     );
   }
-}
+};
 
-const styles = StyleSheet.create({
+cconst styles = StyleSheet.create({
+  t: {
+    fontSize: 20
+  },
+  tt: {
+    fontSize: 15
+  },
+  txt: {
+    marginTop: 10
+  },
   input: {
     width: 300,
     borderColor: "black",
     borderWidth: 1,
     padding: 10,
-    marginBottom: 5,
-    marginTop: 5
+    marginTop: 20
   },
   inputContainer: {
     flex: 1,
@@ -109,7 +106,7 @@ const styles = StyleSheet.create({
     paddingTop: 10
   },
   inputTxt: {
-    width: 300,
+    width: 270,
     borderColor: "black",
     borderWidth: 1,
     padding: 10,
@@ -119,8 +116,11 @@ const styles = StyleSheet.create({
   listItem: {
     padding: 10,
     marginTop: 5,
-    borderColor: "grey",
+    borderTopColor: "grey",
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
     borderWidth: 1,
+    borderBottomColor: "grey",
     alignItems: "center",
     width: 300
   }
