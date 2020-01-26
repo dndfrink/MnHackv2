@@ -5,7 +5,7 @@ const SensorItem = props => {
     return (
         <View style={styles.listItem}>
             <Text>{props.title}</Text>
-            <Text>{props.value}</Text>
+            <Text style={styles.textStyle}>{props.value}</Text>
         </View>
     );
 };
@@ -20,7 +20,12 @@ const styles = StyleSheet.create({
         borderColor: "blue",
         flexDirection: "column",
         borderWidth: 1,
+        borderRadius: 10,
         height: 50
+    },
+    textStyle: {
+        color: "red",
+        textAlign: "center"
     }
 });
 export default SensorItem;
