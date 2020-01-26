@@ -46,15 +46,31 @@ export default class RefSearchScreen extends React.Component {
           />
         </View>
         <ScrollView style={styles.inputScroll}>
-          <Button
-            style={styles.inputTxt}
-            title="Strawberry"
-            onPress={() => navigate("ReferenceScreen")}
-          ></Button>
-          <Button style={styles.inputTxt} title="Broccoli"></Button>
-          <Button style={styles.inputTxt} title="Runner Beans"></Button>
-          <Button style={styles.inputTxt} title="Coriander"></Button>
-          <Button style={styles.inputTxt} title="Peas"></Button>
+          <TouchableOpacity onPress={() => navigate("ReferenceScreen")}>
+            <View style={styles.listItem}>
+              <Text>Strawberry</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.listItem}>
+              <Text>Runner Beans</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.listItem}>
+              <Text>Broccoli</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.listItem}>
+              <Text>Peas</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.listItem}>
+              <Text>Coriander</Text>
+            </View>
+          </TouchableOpacity>
           <TouchableOpacity>
             <View style={styles.listItem}>
               <Text>Peppers</Text>
@@ -94,8 +110,9 @@ const styles = StyleSheet.create({
     padding: 10,
     marginVertical: 10,
     backgroundColor: "#ccc",
-    borderColor: "blue",
+    borderColor: "black",
     borderWidth: 1,
-    alignItems: "center"
+    alignItems: "center",
+    width: 300
   }
 });
