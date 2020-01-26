@@ -15,20 +15,16 @@ import MainScreen from "./components/mainscreen";
 import CommunityScreen from "./components/CommunityScreen.js";
 import DataScreen from "./components/DataScreen";
 import ReferenceScreen from "./components/ReferenceScreen";
-<<<<<<< HEAD
-
-import StrawberryDeviceScreen from "./components/StrawberryDeviceScreen"
-=======
 import RefSearch from "./components/RefSearch";
 import StrawberryDeviceScreen from "./components/StrawberryDeviceScreen";
->>>>>>> 770c3317b2731ddb3eb66205f39964f9fe6c8f0b
 
 const MainNavigator = createStackNavigator({
   MainScreen: { screen: MainScreen },
   ReferenceScreen: { screen: ReferenceScreen },
   DataScreen: { screen: DataScreen },
   CommunityScreen: { screen: CommunityScreen },
-  StrawberryDeviceScreen: { screen: StrawberryDeviceScreen }
+  StrawberryDeviceScreen: { screen: StrawberryDeviceScreen },
+  RefSearch: { screen: RefSearch }
 });
 
 const App = createAppContainer(MainNavigator);
