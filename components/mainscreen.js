@@ -7,20 +7,34 @@ import {
   Button,
   TextInput,
   ScrollView,
-  FlatList
+  FlatList,
+  Image
 } from "react-native";
-
+import MainButton from "./MainButton";
 export default class MainScreen extends React.Component {
   static navigationOptions = {
-    title: "Welcome"
+    title: ""
   };
   render() {
     const { navigate } = this.props.navigation;
     return (
       <SafeAreaView style={styles.screen}>
-        <Button title="Data" onPress={() => navigate("DataScreen")} />
-        <Button title="Community" onPress={() => navigate("CommunityScreen")} />
-        <Button
+        <Text style={{ fontSize: 40, fontWeight: "bold", paddingTop: 100 }}>
+          Plantbot
+        </Text>
+        <Image
+          style={styles.imageStyle}
+          source={{
+            uri:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTugdpuFfgiJZjU13ZPPPgnh03_CNwhwPUEamiXLBGHWvTYx97N&s"
+          }}
+        />
+        <MainButton title="Data" onPress={() => navigate("DataScreen")} />
+        <MainButton
+          title="Community"
+          onPress={() => navigate("CommunityScreen")}
+        />
+        <MainButton
           title="Reference Search"
           onPress={() => navigate("RefSearch")}
         />
@@ -30,10 +44,18 @@ export default class MainScreen extends React.Component {
 }
 const styles = StyleSheet.create({
   screen: {
-    padding: 70
+    padding: 70,
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"
   },
   buttonItem: {
     padding: 10,
+    marginVertical: 30
+  },
+  imageStyle: {
+    width: 100,
+    height: 100,
     marginVertical: 30
   }
 });

@@ -21,7 +21,7 @@ export default class CommunityScreen extends React.Component {
         <View>
           <TextInput
             placeholder="Community Search"
-            placeholderTextColor="black"
+            placeholderTextColor="grey"
             style={styles.input}
           />
           <View

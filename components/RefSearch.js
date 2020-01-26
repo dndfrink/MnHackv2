@@ -23,7 +23,7 @@ export default class RefSearchScreen extends React.Component {
         <View>
           <TextInput
             placeholder="Plant Search"
-            placeholderTextColor="black"
+            placeholderTextColor="grey"
             style={styles.input}
           />
           <View

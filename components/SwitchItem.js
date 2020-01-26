@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
         color: "blue",
         marginTop: 0,
         fontSize: 25,
-        fontFamily: "Verdana"
     },
     switch: {
         transform: [{ scaleX: 1.3 }, { scaleY: 1.3 }],
