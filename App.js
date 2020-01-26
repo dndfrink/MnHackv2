@@ -8,9 +8,13 @@ import {
   ScrollView,
   FlatList
 } from "react-native";
-import GoalItem from "./components/GoalItem";
+
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
+import MainScreen from "./components/mainscreen";
+import CommunityScreen from "./components/Community";
+import DataScreen from "./components/DataScreen";
+import ReferenceScreen from "./components/ReferenceScreen";
 
 const MainNavigator = createStackNavigator({
   MainScreen: { screen: MainScreen },
