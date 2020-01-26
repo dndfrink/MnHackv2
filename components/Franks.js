@@ -10,31 +10,32 @@ import {
 } from "react-native";
 import SensorItem from "./SensorItem";
 import SwitchItem from "./SwitchItem";
-export default class StrawberryDeviceScreen extends React.Component {
+
+export default class FranksScreen extends React.Component {
   static navigationOptions = {
-    title: "Strawberry Incubator"
+    title: "Frank's Beans"
   };
   constructor() {
     super();
     this.state = {
       switch1Value: false,
-      switch2Value: false,
+      switch2Value: true,
       switch3Value: false
     };
   }
   handleToggleSwitch1 = () => {
     this.setState(state => {
-      return { switch1Value: !state.switch1Value };
+      return { switch1Value: state.switch1Value };
     });
   };
   handleToggleSwitch2 = () => {
     this.setState(state => {
-      return { switch2Value: !state.switch2Value };
+      return { switch2Value: state.switch2Value };
     });
   };
   handleToggleSwitch3 = () => {
     this.setState(state => {
-      return { switch3Value: !state.switch3Value };
+      return { switch3Value: state.switch3Value };
     });
   };
   render() {
@@ -46,21 +47,9 @@ export default class StrawberryDeviceScreen extends React.Component {
           <SensorItem title="Soil Moisture" value="wet" />
         </View>
         <View style={styles.switchContainer}>
-          <SwitchItem
-            title="Water Pump"
-            onPress={this.handleToggleSwitch1.bind(this)}
-            switchValue={this.state.switch1Value}
-          />
-          <SwitchItem
-            title="Lights"
-            onPress={this.handleToggleSwitch2.bind(this)}
-            switchValue={this.state.switch2Value}
-          />
-          <SwitchItem
-            title="Fan"
-            onPress={this.handleToggleSwitch3.bind(this)}
-            switchValue={this.state.switch3Value}
-          />
+          <Text style={styles.t}>Water Pump: On</Text>
+          <Text style={styles.t}>Lights: On</Text>
+          <Text style={styles.t}>Fan: Off</Text>
         </View>
       </View>
     );
@@ -80,6 +69,12 @@ const styles = StyleSheet.create({
   switchContainer: {
     flexDirection: "column",
     alignItems: "center",
-    padding: 50
+    padding: 50,
+    marginVertical: 40
+  },
+  t: {
+    fontSize: 20,
+    color: "blue",
+    marginVertical: 20
   }
 });

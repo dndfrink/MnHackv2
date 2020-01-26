@@ -17,6 +17,7 @@ import DataScreen from "./components/DataScreen";
 import ReferenceScreen from "./components/ReferenceScreen";
 import RefSearch from "./components/RefSearch";
 import StrawberryDeviceScreen from "./components/StrawberryDeviceScreen";
+import FranksScreen from "./components/Franks";
 
 const MainNavigator = createStackNavigator({
   MainScreen: { screen: MainScreen },
@@ -24,7 +25,10 @@ const MainNavigator = createStackNavigator({
   DataScreen: { screen: DataScreen },
   CommunityScreen: { screen: CommunityScreen },
   StrawberryDeviceScreen: { screen: StrawberryDeviceScreen },
-  RefSearch: { screen: RefSearch }
+  RefSearch: { screen: RefSearch },
+  FranksScreen: {
+    screen: FranksScreen
+  }
 });
 
 const App = createAppContainer(MainNavigator);

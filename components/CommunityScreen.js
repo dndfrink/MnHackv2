@@ -46,7 +46,7 @@ export default class CommunityScreen extends React.Component {
             <Text style={styles.t}>Nearby Gardens</Text>
           </View>
           <ScrollView style={styles.inputScroll}>
-            <TouchableOpacity onPress={() => navigate("ReferenceScreen")}>
+            <TouchableOpacity onPress={() => navigate("FranksScreen")}>
               <View style={styles.listItem}>
                 <Text style={styles.tt}>Frank's Personal Beans</Text>
               </View>

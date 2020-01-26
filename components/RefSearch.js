@@ -79,11 +79,12 @@ export default class RefSearchScreen extends React.Component {
       </View>
     );
   }
-};
+}
 
-cconst styles = StyleSheet.create({
+const styles = StyleSheet.create({
   t: {
-    fontSize: 20
+    fontSize: 20,
+    marginTop: 5
   },
   tt: {
     fontSize: 15
@@ -106,7 +107,7 @@ cconst styles = StyleSheet.create({
     paddingTop: 10
   },
   inputTxt: {
-    width: 270,
+    width: 300,
     borderColor: "black",
     borderWidth: 1,
     padding: 10,
