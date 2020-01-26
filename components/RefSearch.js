@@ -35,15 +35,25 @@ export default class RefSearchScreen extends React.Component {
         <View>
           <TextInput
             placeholder="Plant Search"
+            placeholderTextColor="black"
             style={styles.input}
             onChangeText={text => this.setState({ text })}
             value={this.state.text}
           />
-          <Button
-            title="CANCEL"
-            color="red"
-            onPress={() => navigate("ReferenceScreen")}
-          />
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            <Button title="Add" color="blue" />
+            <Button
+              title="CANCEL"
+              color="red"
+              onPress={() => navigate("ReferenceScreen")}
+            />
+          </View>
         </View>
         <ScrollView style={styles.inputScroll}>
           <TouchableOpacity onPress={() => navigate("ReferenceScreen")}>
@@ -73,7 +83,7 @@ export default class RefSearchScreen extends React.Component {
           </TouchableOpacity>
           <TouchableOpacity>
             <View style={styles.listItem}>
-              <Text>Peppers</Text>
+              <Text color="grey">Peppers</Text>
             </View>
           </TouchableOpacity>
         </ScrollView>
@@ -108,9 +118,8 @@ const styles = StyleSheet.create({
   },
   listItem: {
     padding: 10,
-    marginVertical: 10,
-    backgroundColor: "#ccc",
-    borderColor: "black",
+    marginTop: 5,
+    borderColor: "grey",
     borderWidth: 1,
     alignItems: "center",
     width: 300
