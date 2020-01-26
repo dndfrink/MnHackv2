@@ -18,9 +18,12 @@ export default class MainScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <SafeAreaView style={styles.screen}>
-        <Button title="Reference" onPress={() => navigate("ReferenceScreen")} />
         <Button title="Data" onPress={() => navigate("DataScreen")} />
         <Button title="Community" onPress={() => navigate("CommunityScreen")} />
+        <Button
+          title="Reference Search"
+          onPress={() => navigate("RefSearch")}
+        />
       </SafeAreaView>
     );
   }

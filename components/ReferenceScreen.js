@@ -6,20 +6,20 @@ import {
   Button,
   TextInput,
   ScrollView,
-  FlatList
+  FlatList,
+  Modal
 } from "react-native";
 
 export default class ReferenceScreen extends React.Component {
   static navigationOptions = {
-    title: "Welcome"
+    title: "Strawberry Plant"
   };
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <Button
-        title="Here"
-        onPress={() => navigate("Profile", { name: "Jane" })}
-      />
+      <ScrollView>
+        <Button title="Name" onPress={() => navigate("RefSearch")} />
+      </ScrollView>
     );
   }
 }
@@ -66,9 +66,3 @@ export default class ReferenceScreen extends React.Component {
 //     </View>
 //   );
 // }
-
-// const styles = StyleSheet.create({
-//   screen: {
-//     padding: 70
-//   }
-// });
