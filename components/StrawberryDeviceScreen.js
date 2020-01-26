@@ -40,18 +40,18 @@ export default class StrawberryDeviceScreen extends React.Component {
     render() {
         const { navigate } = this.props.navigation;
         return (
-            <View style={styles.screen}>
+            <ScrollView style={styles.screen}>
                 <View style={styles.sensorContainer}>
                     <SensorItem title="Temperature" value="72" />
-                    <SensorItem title="Humidity" value="80%" />
-                    <SensorItem title="Soil Moisture" value="853" />
+                    <SensorItem title="Humidity" value="70%" />
+                    <SensorItem title="Soil Moisture" value="653" />
                 </View>
                 <View style={styles.switchContainer}>
                     <SwitchItem title="Water Pump" onPress={this.handleToggleSwitch1.bind(this)} switchValue={this.state.switch1Value} />
                     <SwitchItem title="Lights" onPress={this.handleToggleSwitch2.bind(this)} switchValue={this.state.switch2Value} />
                     <SwitchItem title="Fan" onPress={this.handleToggleSwitch3.bind(this)} switchValue={this.state.switch3Value} />
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }

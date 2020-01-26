@@ -81,7 +81,7 @@ export default class RefSearchScreen extends React.Component {
   }
 };
 
-cconst styles = StyleSheet.create({
+const styles = StyleSheet.create({
   t: {
     fontSize: 20
   },
