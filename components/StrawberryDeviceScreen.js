@@ -42,7 +42,7 @@ export default class StrawberryDeviceScreen extends React.Component {
         return (
             <View style={styles.screen}>
                 <View style={styles.sensorContainer}>
-                    <SensorItem title="Temp" value="72" />
+                    <SensorItem title="Temperature" value="72" />
                     <SensorItem title="Humidity" value="80%" />
                     <SensorItem title="Soil Moisture" value="853" />
                 </View>

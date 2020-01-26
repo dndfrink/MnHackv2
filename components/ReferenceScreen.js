@@ -26,6 +26,10 @@ export default class ReferenceScreen extends React.Component {
         </View>
         <View style={styles.instructionContainer}>
           <Text style={styles.growingInstructions}>Growing Instructions: Strawberries grow best indoors at around room temperature. When grown outside, they need direct sunlight, so make sure that the artificial lights in the device are on for most of the day.</Text>
+          <Text style={styles.target}>Target Conditions:</Text>
+          <Text style={styles.condition}>Temperature: 60-80°F</Text>
+          <Text style={styles.condition}>Humidity: 65-75%</Text>
+          <Text style={styles.condition}>Soil Moisture: 600-700</Text>
         </View>
       </ScrollView >
     );
@@ -56,5 +60,18 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     marginLeft: 30,
     marginRight: 30
+  },
+  target: {
+    marginTop: 20,
+    fontSize: 20,
+    textAlign: "center",
+    marginBottom: 10,
+    fontWeight: "bold"
+  },
+  condition: {
+    marginVertical: 10,
+    marginLeft: 30,
+    textAlign: "left",
+    fontSize: 15,
   }
 })

@@ -6,6 +6,7 @@ const SwitchItem = props => {
         <View style={styles.switchItem} >
             <Text style={styles.textStyle}>{props.title}: </Text>
             <Switch
+                style={styles.switch}
                 value={props.switchValue}
                 onValueChange={props.onPress.bind(this)} />
         </View >
@@ -21,7 +22,13 @@ const styles = StyleSheet.create({
     textStyle: {
         textAlign: "center",
         color: "blue",
-        marginTop: 7
+        marginTop: 0,
+        fontSize: 25,
+        fontFamily: "Verdana"
+    },
+    switch: {
+        transform: [{ scaleX: 1.3 }, { scaleY: 1.3 }],
+        marginLeft: 15
     }
 })
 
