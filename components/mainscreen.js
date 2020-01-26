@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   StyleSheet,
+  SafeAreaView,
   Text,
   View,
   Button,
@@ -16,7 +17,20 @@ export default class MainScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <Button title="Reference" onPress={() => navigate("ReferenceScreen")} />
+      <SafeAreaView style={styles.screen}>
+        <Button title="Reference" onPress={() => navigate("ReferenceScreen")} />
+        <Button title="Data" onPress={() => navigate("DataScreen")} />
+        <Button title="Community" onPress={() => navigate("CommunityScreen")} />
+      </SafeAreaView>
     );
   }
 }
+const styles = StyleSheet.create({
+  screen: {
+    padding: 70
+  },
+  buttonItem: {
+    padding: 10,
+    marginVertical: 30
+  }
+});

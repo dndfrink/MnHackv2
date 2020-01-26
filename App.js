@@ -12,7 +12,7 @@ import {
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import MainScreen from "./components/mainscreen";
-import CommunityScreen from "./components/Community";
+import CommunityScreen from "./components/CommunityScreen.js";
 import DataScreen from "./components/DataScreen";
 import ReferenceScreen from "./components/ReferenceScreen";
 
@@ -20,7 +20,7 @@ const MainNavigator = createStackNavigator({
   MainScreen: { screen: MainScreen },
   ReferenceScreen: { screen: ReferenceScreen },
   DataScreen: { screen: DataScreen },
-  ComunityScreen: { screen: CommunityScreen }
+  CommunityScreen: { screen: CommunityScreen }
 });
 
 const App = createAppContainer(MainNavigator);
