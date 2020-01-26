@@ -11,14 +11,14 @@ import {
 
 export default class DataScreen extends React.Component {
   static navigationOptions = {
-    title: "Welcome"
+    title: "Devices"
   };
   render() {
     const { navigate } = this.props.navigation;
     return (
       <Button
-        title="Go to Jane's profile"
-        onPress={() => navigate("Profile", { name: "Jane" })}
+        title="Strawberry Incubator"
+        onPress={() => navigate("StrawberryDeviceScreen")}
       />
     );
   }
