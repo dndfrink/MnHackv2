@@ -7,7 +7,8 @@ import {
   TextInput,
   ScrollView,
   FlatList,
-  Modal
+  Modal,
+  Image
 } from "react-native";
 
 export default class ReferenceScreen extends React.Component {
@@ -18,51 +19,42 @@ export default class ReferenceScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <ScrollView>
-        <Button title="Name" onPress={() => navigate("RefSearch")} />
-      </ScrollView>
+        <Button title="Back To Search" onPress={() => navigate("RefSearch")} />
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.descriptionText}>Strawberries are a nutritious and tasty way to get assorted vitamins, antioxidants, and fiber into your diet. They can help maintain good cholesterol and blood pressure levels, as well as protecting against the development of cancer.</Text>
+          <Image style={styles.imageStyle} source={{ uri: 'https://berryworld.imgix.net/consumerAssets/Strawberry-transparent1.png?auto=compress%2Cformat&fit=clip&w=800&w=800&auto=format&auto=compress' }} />
+        </View>
+        <View style={styles.instructionContainer}>
+          <Text style={styles.growingInstructions}>Growing Instructions: Strawberries grow best indoors at around room temperature. When grown outside, they need direct sunlight, so make sure that the artificial lights in the device are on for most of the day.</Text>
+        </View>
+      </ScrollView >
     );
   }
 }
-
-// export default function App() {
-//   const [courseGoals, setCourseGoals] = useState([]);
-//   const [isAddMode, setIsAddMode] = useState(false);
-
-//   const addGoalHandler = goalTitle => {
-//     setCourseGoals(currentGoals => [
-//       ...currentGoals,
-//       { id: Math.random().toString(), value: goalTitle }
-//     ]);
-//     setIsAddMode(false);
-//   };
-//   const removeGoalHandler = goalId => {
-//     setCourseGoals(currentGoals => {
-//       return currentGoals.filter(goal => goal.id !== goalId);
-//     });
-//   };
-//   const cancelGoalAdditionHandler = () => {
-//     setIsAddMode(false);
-//   };
-
-//   return (
-//     <View style={styles.screen}>
-//       <Button title="Add New Goal" onPress={() => setIsAddMode(true)} />
-//       <GoalInput
-//         visible={isAddMode}
-//         onAddGoal={addGoalHandler}
-//         onCancel={cancelGoalAdditionHandler}
-//       />
-//       <FlatList
-//         keyExtractor={(item, index) => item.id}
-//         data={courseGoals}
-//         renderItem={itemData => (
-//           <GoalItem
-//             id={itemData.item.id}
-//             onDelete={removeGoalHandler}
-//             title={itemData.item.value}
-//           />
-//         )}
-//       />
-//     </View>
-//   );
-// }
+const styles = StyleSheet.create({
+  descriptionText: {
+    maxWidth: "50%",
+    textAlign: "left",
+    paddingLeft: 10,
+    paddingTop: 10
+  },
+  descriptionContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  imageStyle: {
+    width: 100,
+    height: 100,
+    marginVertical: 30
+  },
+  instructionContainer: {
+    paddingTop: 20,
+    flexDirection: 'column'
+  },
+  growingInstructions: {
+    textAlign: "center",
+    justifyContent: "space-around",
+    marginLeft: 30,
+    marginRight: 30
+  }
+})
