@@ -15,7 +15,7 @@ import MainScreen from "./components/mainscreen";
 import CommunityScreen from "./components/CommunityScreen.js";
 import DataScreen from "./components/DataScreen";
 import ReferenceScreen from "./components/ReferenceScreen";
-import StrawberryDeviceScreen from "./components/StrawberryDeviceScreen";
+import StrawberryDeviceScreen from "./components/StrawberryDeviceScreen"
 
 const MainNavigator = createStackNavigator({
   MainScreen: { screen: MainScreen },
