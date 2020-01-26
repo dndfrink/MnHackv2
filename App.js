@@ -16,15 +16,14 @@ import CommunityScreen from "./components/CommunityScreen.js";
 import DataScreen from "./components/DataScreen";
 import ReferenceScreen from "./components/ReferenceScreen";
 
-import StrawberryDeviceScreen from "./components/StrawberryDeviceScreen";
+import StrawberryDeviceScreen from "./components/StrawberryDeviceScreen"
 
 const MainNavigator = createStackNavigator({
   MainScreen: { screen: MainScreen },
   ReferenceScreen: { screen: ReferenceScreen },
   DataScreen: { screen: DataScreen },
   CommunityScreen: { screen: CommunityScreen },
-  StrawberryDeviceScreen: { screen: StrawberryDeviceScreen },
-  RefSearch: { screen: RefSearch }
+  StrawberryDeviceScreen: { screen: StrawberryDeviceScreen }
 });
 
 const App = createAppContainer(MainNavigator);
